@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff8f2">
+    <title>Should I Approach?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <p class="eyebrow">A very unserious decision tool</p>
+      <h1>Should I approach?</h1>
+      <p class="intro">Let the totally-not-made-up analysis decide.</p>
+
+      <section id="choice-screen" class="screen" aria-labelledby="choice-title">
+        <h2 id="choice-title">First things first...</h2>
+        <p>Are you a girl or a boy?</p>
+        <div class="choice-buttons">
+          <button class="button button-secondary" type="button" data-gender="girl">I am a girl</button>
+          <button class="button button-secondary" type="button" data-gender="boy">I am a boy</button>
+        </div>
+      </section>
+
+      <section id="name-screen" class="screen" aria-labelledby="name-title" hidden>
+        <h2 id="name-title">Who are we talking about?</h2>
+        <form id="name-form">
+          <label id="name-label" for="name-input">Their name</label>
+          <input id="name-input" name="name" type="text" maxlength="60" autocomplete="off" required>
+          <button id="submit-button" class="button button-primary" type="submit"></button>
+        </form>
+        <button id="change-choice" class="text-button" type="button">← Change my choice</button>
+      </section>
+
+      <section id="loading-screen" class="screen" aria-live="polite" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <h2 id="loading-message">Performing highly scientific analysis...</h2>
+        <p class="loading-note">Please do not refresh. The experts are thinking.</p>
+      </section>
+
+      <section id="result-screen" class="screen" aria-live="polite" hidden>
+        <p class="result-label">The verdict</p>
+        <h2 id="result-message"></h2>
+        <p class="disclaimer">Just for laughs — trust your own judgment!</p>
+        <button id="play-again" class="button button-primary" type="button">Try another name</button>
+      </section>
+    </main>
+    <footer>Made for fun. Absolutely no actual profiling involved.</footer>
+  </body>
+</html>
